@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vffyh455h-go-gitops
+  description: This is GitOps manifest for vffyh455h-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=vffyh455h-go
+    backstage.io/kubernetes-id: vffyh455h-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: vffyh455h-go   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:vffyh455h-go
